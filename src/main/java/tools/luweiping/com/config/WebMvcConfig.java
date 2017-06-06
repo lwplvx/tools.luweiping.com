@@ -1,6 +1,7 @@
 package tools.luweiping.com.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * Created by lwplvx on 2017/6/5.
  */
 @Configuration
+@EnableWebMvc
 public class WebMvcConfig extends WebMvcConfigurerAdapter{
 
     @Override
