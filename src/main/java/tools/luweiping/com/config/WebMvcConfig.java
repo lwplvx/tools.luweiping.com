@@ -22,7 +22,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
 
-        registry.addViewController("/").setViewName("/index");
         registry.addViewController("/base64").setViewName("/base64/index");
         registry.addViewController("/md5").setViewName("/md5/index");
         registry.addViewController("/ip").setViewName("/ip/index");
