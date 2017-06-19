@@ -146,6 +146,10 @@ app.controller('mainController', function ($scope, $rootScope, $http, $location)
         var b = new Base64();
         $scope.resValue = b.encode($scope.srcValue);
     };
+    $scope.md5EnCode = function () {
+        var hashmd5 = hex_md5($scope.srcValue);
+        $scope.resValue = hashmd5;
+    };
 
     $scope.deCode = function () {
         var b = new Base64();
@@ -214,8 +218,7 @@ app.controller('ipController', function ($scope, $rootScope, $http, $location) {
     $scope.getIP = function () {
         //  http://api.shikexin.com/ws/api/getIpNo?appKey=66f61bf70ee615f2c14afb23948da01c
         var url = "http://api.shikexin.com/ws/api/getIpNo?appKey=66f61bf70ee615f2c14afb23948da01c";
-        jQuery.getJSON(url + "&callbak=?", function(data)
-        {
+        jQuery.getJSON(url + "&callbak=?", function (data) {
 
             $scope.ipData = data.data;
         });
@@ -223,16 +226,16 @@ app.controller('ipController', function ($scope, $rootScope, $http, $location) {
         return;
 
         $.ajax({
-           url: url ,
-           type: 'GET',
-           dataType: 'jsonp',  // 处理Ajax跨域问题
+            url: url,
+            type: 'GET',
+            dataType: 'jsonp',  // 处理Ajax跨域问题
             jsonp: "jsonpCallback",//传递给请求处理程序或页面的，
-           //用以获得jsonp回调函数名的参数名(一般默认为: callback)
-           jsonpCallback: "jsonpCallback",//自定义的jsonp回调函数名称，
-           //默认为jQuery自动生成的随机函数名，也可以写"?"，jQuery会自动为你处理数据
-           success: function (data) {
-               $scope.ipData = data.data;
-           }
+            //用以获得jsonp回调函数名的参数名(一般默认为: callback)
+            jsonpCallback: "jsonpCallback",//自定义的jsonp回调函数名称，
+            //默认为jQuery自动生成的随机函数名，也可以写"?"，jQuery会自动为你处理数据
+            success: function (data) {
+                $scope.ipData = data.data;
+            }
         });
         function jsonpCallback(data) {
             $scope.ipData = data.data;
@@ -266,11 +269,11 @@ app.controller('ipController', function ($scope, $rootScope, $http, $location) {
 
 
         $.ajax({
-            type:"get",
-            url:url,/*url写异域的请求地址*/
-            dataType:"jsonp",/*加上datatype*/
-            jsonpCallback:"jsonpCallback",/*设置一个回调函数，名字随便取，和下面的函数里的名字相同就行*/
-            success:function(data){
+            type: "get",
+            url: url, /*url写异域的请求地址*/
+            dataType: "jsonp", /*加上datatype*/
+            jsonpCallback: "jsonpCallback", /*设置一个回调函数，名字随便取，和下面的函数里的名字相同就行*/
+            success: function (data) {
                 $scope.ipData = data.data;
             }
         });

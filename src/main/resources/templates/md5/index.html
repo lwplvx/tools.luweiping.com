@@ -1,10 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" />
-    <title>MD5</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Md5</title>
+    <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" />
 </head>
-<body>
+<body class="pb-5">
+<!-- 头部 -->
+<div class="container ">
+    <div class="m-4">
+        <h2> Md5 在线解码编码</h2>
+    </div>
+</div>
+
+<nav class="navbar navbar-toggleable navbar-light bg-info ">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-danger"
+                       href="#">网站首页</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item ">
+                    <a class="nav-link text-white" href="#">更多</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" ng-controller="mainController">
+    <div class="m-2">
+        <small>
+            当前位置：lwplvx » Md5 在线解码编码
+        </small>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="card rounded-0">
+                <div class="card-header">Md5 解码/编码</div>
+                <div class="card-block">
+                    <h4 class="text-danger text-center">Md5 解码/编码</h4>
+
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home"
+                             role="tabpanel" aria-labelledby="home-tab">
+
+                            <div class="mt-2 mb-2">请输入要进行编码或解码的字符：</div>
+
+                            <textarea class="form-control rounded-0" rows="6"
+                                      ng-model="srcValue"></textarea>
+                            <div class="form-inline pt-3">
+                                <button class="btn btn-primary ml-3 rounded-0"
+                                        ng-click="md5EnCode()">
+                                    编码
+                                </button>
+                                <button class="btn btn-primary ml-3 rounded-0"
+                                        ng-click="copy()">
+                                    复制
+                                </button>
+                                <button class="btn btn-primary ml-3 rounded-0"
+                                        ng-click="clear()">
+                                    清空
+                                </button>
+                            </div>
+
+                            <div class="mt-2 mb-2"> MD5编码或解码结果：</div>
+                            <textarea id="res-textarea" class="form-control rounded-0" rows="6"
+                                      ng-model="resValue"></textarea>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div ng-include="'rightNav.html'"></div>
+        </div>
+    </div>
+</div>
+<script  th:src="@{/static/js/jquery-3.1.1.min.js}"></script>
+<script  th:src="@{/static/js/bootstrap.min.js}"></script>
+<script  th:src="@{/static/js/angular.min.js}"></script>
+<script  th:src="@{/static/js/Md5.js}"></script>
+<script  th:src="@{/static/js/app/app.js}"></script>
 
 </body>
 </html>
