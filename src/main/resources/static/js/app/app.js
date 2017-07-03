@@ -141,7 +141,6 @@ app.controller('mainController', function ($scope, $rootScope, $http, $location)
     $scope.srcValue = "";
     $scope.resValue = "";
 
-
     $scope.enCode = function () {
         var b = new Base64();
         $scope.resValue = b.encode($scope.srcValue);
@@ -149,6 +148,17 @@ app.controller('mainController', function ($scope, $rootScope, $http, $location)
     $scope.md5EnCode = function () {
         var hashmd5 = hex_md5($scope.srcValue);
         $scope.resValue = hashmd5;
+    };
+    $scope.objectToHTML = function () {
+        var html = $scope.srcValue;
+        try {
+            html = objectToHTML( JSON.parse(html));
+            $("#json-view").html(html);
+        } catch (e) {
+            $("#json-view").text(html);
+        }
+        displayUI(html);
+        $scope.resValue = $("#json-view").text();
     };
 
     $scope.deCode = function () {

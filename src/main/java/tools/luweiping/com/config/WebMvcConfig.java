@@ -25,6 +25,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
         registry.addViewController("/base64").setViewName("/base64/index");
         registry.addViewController("/md5").setViewName("/md5/index");
         registry.addViewController("/ip").setViewName("/ip/index");
+        registry.addViewController("/json").setViewName("/json/index");
 
         super.addViewControllers(registry);
     }

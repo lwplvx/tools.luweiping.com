@@ -45,6 +45,9 @@ String path=request.getSession().getServletContext().getRealPath("相对路径")
                 case "ip":
                     vieName = "/ip/index";
                     break;
+                case "json":
+                    vieName = "/json/index";
+                    break;
             }
         } catch (Exception e) {
 
