@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head> 
+    <title>Home</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link th:href="@{/static/css/bootstrap.min.css}" rel="stylesheet" />
+</head>
+<body class="pb-5">
+<!-- 头部 -->
+<div class="container ">
+    <div class="m-4">
+        <h2> lwplvx | developer</h2>
+    </div>
+</div>
+<!-- navbar -->
+<div th:include="../templates/navbar :: navbar"></div>
+
+<div class="container">
+    <div class="m-2">
+        <small>
+            当前位置：lwplvx » Home
+        </small>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            
+            Home
+            
+        </div>
+        <div class="col-md-3">
+           
+            
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<div th:include="../templates/footer :: footer"></div>
+
+</body>
+</html>

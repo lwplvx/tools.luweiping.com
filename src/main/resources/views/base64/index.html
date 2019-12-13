@@ -15,29 +15,8 @@
     </div>
 </div>
 
-<nav class="navbar navbar-toggleable navbar-light bg-info ">
-    <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link text-danger"
-                       href="#">网站首页</a>
-                </li>
-
-            </ul>
-            <ul class="navbar-nav ml-auto">
-
-                <li class="nav-item ">
-                    <a class="nav-link text-white" href="#">更多</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<!-- navbar -->
+<div th:include="../templates/navbar :: navbar"></div>
 
 <div class="container" ng-controller="mainController">
     <div class="m-2">
@@ -114,8 +93,8 @@
         </div>
     </div>
 </div>
-<script  th:src="@{/static/js/jquery-3.1.1.min.js}"></script>
-<script  th:src="@{/static/js/bootstrap.min.js}"></script>
+<!-- footer -->
+<div th:include="../templates/footer :: footer"></div>
 <script  th:src="@{/static/js/angular.min.js}"></script>
 <script  th:src="@{/static/js/base64.js}"></script>
 <script  th:src="@{/static/js/app/app.js}"></script>
