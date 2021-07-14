@@ -1,4 +1,4 @@
-package tools.luweiping.com.controller;
+package tools.lwp.com.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

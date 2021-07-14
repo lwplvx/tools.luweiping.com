@@ -1,4 +1,4 @@
-package tools.luweiping.com;
+package tools.lwp.com;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

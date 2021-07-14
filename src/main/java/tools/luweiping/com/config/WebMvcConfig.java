@@ -1,4 +1,4 @@
-package tools.luweiping.com.config;
+package tools.lwp.com.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;

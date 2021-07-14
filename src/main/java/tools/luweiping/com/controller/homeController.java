@@ -1,4 +1,4 @@
-package tools.luweiping.com.controller;
+package tools.lwp.com.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
